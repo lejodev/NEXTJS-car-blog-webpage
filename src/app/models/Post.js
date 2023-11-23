@@ -4,13 +4,13 @@ export const Post = Schema({
     title: {
         type: String
     },
+    text: {
+        type: String
+    },
     author: {
         type: Schema.Types.ObjectId,
         ref: "User"
     },
-    date: {
-        type: Date
-    }
-})
+}, { timestamps: true })
 
-export default models.Post || models("Post", Post)
+export default models.Post || model("Post", Post)

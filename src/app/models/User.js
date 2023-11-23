@@ -1,6 +1,6 @@
 import { Schema, model, models } from "mongoose";
 
-export const userSchema = new Schema({
+export const User = new Schema({
     role: {
         type: String,
         required: true
@@ -11,7 +11,8 @@ export const userSchema = new Schema({
     },
     username: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     password: {
         type: String,
@@ -20,4 +21,4 @@ export const userSchema = new Schema({
     // check if posts fit correctly here
 })
 
-export default models.userSchema || model("User", userSchema)
+export default models.User || model("User", User)

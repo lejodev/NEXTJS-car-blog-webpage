@@ -8,7 +8,7 @@ export const Event = Schema({
         type: String
     },
     location: {
-        // This will be a location
+        // This will be a location obect
         type: String
     },
     date: {
